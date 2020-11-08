@@ -14,3 +14,17 @@ export const GlobalStyles = createGlobalStyle`
 export const AppContainer = styled.div`
   position: relative;
 `;
+
+export const Colors = {
+  redBackground: {
+    color: "#FA1200",
+    opacity: 0.6,
+  },
+  inputPlaceholders: {
+    color: "#4E4E4E",
+  },
+  inputBorder: {
+    color: "#4E4E4E",
+    stroke: 0.5,
+  },
+};
