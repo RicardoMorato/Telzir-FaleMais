@@ -20,5 +20,9 @@ export const NavigationOptionsContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   margin-right: 100px;
-  cursor: pointer;
+
+  p {
+    font-family: "Heebo", sans-serif;
+    cursor: pointer;
+  }
 `;

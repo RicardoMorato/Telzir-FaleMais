@@ -1,12 +1,12 @@
 import React from "react";
 
 import Navbar from "./Components/Navbar";
-
-import { AppContainer } from "./global/styles";
+import { AppContainer, GlobalStyles } from "./global/styles";
 
 function App() {
   return (
     <AppContainer>
+      <GlobalStyles />
       <Navbar />
     </AppContainer>
   );
