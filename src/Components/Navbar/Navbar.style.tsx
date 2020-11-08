@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { Colors } from "../../global/styles";
+
 export const NavbarContainer = styled.header`
   height: 14%;
   width: 100%;
@@ -7,6 +9,10 @@ export const NavbarContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  top: 0;
+  z-index: 2;
+  background-color: ${Colors.white.color};
+  padding: 25px 0;
 
   img {
     margin-left: 100px;

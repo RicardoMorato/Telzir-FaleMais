@@ -1,6 +1,6 @@
 import React from "react";
 
-import Navbar from "./Components/Navbar";
+import { Navbar, Footer } from "./Components";
 import { AppContainer, GlobalStyles } from "./global/styles";
 
 function App() {
@@ -8,6 +8,7 @@ function App() {
     <AppContainer>
       <GlobalStyles />
       <Navbar />
+      <Footer />
     </AppContainer>
   );
 }

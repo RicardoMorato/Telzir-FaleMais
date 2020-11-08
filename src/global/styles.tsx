@@ -27,4 +27,7 @@ export const Colors = {
     color: "#4E4E4E",
     stroke: 0.5,
   },
+  white: {
+    color: "#FFF",
+  },
 };
