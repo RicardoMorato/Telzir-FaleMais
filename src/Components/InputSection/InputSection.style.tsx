@@ -14,7 +14,8 @@ export const InputsWrapper = styled.div`
   align-items: center;
   justify-content: space-evenly;
 
-  .ant-select-selector {
+  .ant-select-selector,
+  .ant-input-number {
     border-radius: 5px !important;
   }
 `;

@@ -22,6 +22,7 @@ export const FooterContainer = styled.section`
 export const FooterHeader = styled.h2`
   color: ${Colors.white.color};
   font-size: 1.2rem;
+  font-weight: bold;
 `;
 
 export const MainInformationContainer = styled.div`
