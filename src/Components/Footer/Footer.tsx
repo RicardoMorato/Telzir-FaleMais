@@ -16,6 +16,7 @@ import {
   SocialMediaContainer,
   MiscInfoContainer,
   PrivacyPoliticsContainer,
+  LastInfo,
 } from "./Footer.style";
 
 export default function Footer() {
@@ -64,6 +65,11 @@ export default function Footer() {
           <p>Política de privacidade</p>
         </PrivacyPoliticsContainer>
       </MiscInfoContainer>
+
+      <LastInfo>
+        <p>© 2020 Telzir Technologies Inc.</p>
+        <p>Designed &amp; developed by Ricardo Morato</p>
+      </LastInfo>
     </FooterContainer>
   );
 }

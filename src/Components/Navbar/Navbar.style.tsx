@@ -12,7 +12,7 @@ export const NavbarContainer = styled.header`
   top: 0;
   z-index: 2;
   background-color: ${Colors.white.color};
-  padding: 25px 0;
+  padding: 15px 0;
 
   img {
     margin-left: 100px;

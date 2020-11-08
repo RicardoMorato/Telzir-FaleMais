@@ -29,7 +29,7 @@ export const MainInformationContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 50px;
+  margin-top: 15px;
 `;
 
 export const CompanyInfo = styled.div`
@@ -72,4 +72,12 @@ export const PrivacyPoliticsContainer = styled.div`
   p {
     margin: 0;
   }
+`;
+
+export const LastInfo = styled.div`
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 150px;
 `;
