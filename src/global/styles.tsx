@@ -2,6 +2,7 @@ import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
+  @import '~antd/dist/antd.css';
 
   body {
     margin: 0;
@@ -20,12 +21,8 @@ export const Colors = {
     color: "#FA1200",
     opacity: 0.6,
   },
-  inputPlaceholders: {
-    color: "#4E4E4E",
-  },
-  inputBorder: {
-    color: "#4E4E4E",
-    stroke: 0.5,
+  buttonHover: {
+    color: "#E2E2E2",
   },
   white: {
     color: "#FFF",
