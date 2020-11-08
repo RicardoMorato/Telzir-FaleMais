@@ -17,11 +17,11 @@ export const FooterContainer = styled.section`
     color: ${Colors.white.color};
     font-weight: 300;
   }
+`;
 
-  h2 {
-    color: ${Colors.white.color};
-    font-size: 1.2rem;
-  }
+export const FooterHeader = styled.h2`
+  color: ${Colors.white.color};
+  font-size: 1.2rem;
 `;
 
 export const MainInformationContainer = styled.div`

@@ -11,6 +11,7 @@ import {
 
 import {
   FooterContainer,
+  FooterHeader,
   MainInformationContainer,
   CompanyInfo,
   SocialMediaContainer,
@@ -24,7 +25,7 @@ export default function Footer() {
     <FooterContainer>
       <MainInformationContainer>
         <CompanyInfo>
-          <h2>Conheça a empresa</h2>
+          <FooterHeader>Conheça a empresa</FooterHeader>
           <p>Quem somos</p>
           <p>O que oferecemos</p>
           <p>Carreiras</p>
@@ -33,7 +34,7 @@ export default function Footer() {
         </CompanyInfo>
 
         <CompanyInfo>
-          <h2>Conheça outros produtos da empresa</h2>
+          <FooterHeader>Conheça outros produtos da empresa</FooterHeader>
           <p>Telzir LigueMais</p>
           <p>Telzir OuçaMais</p>
           <p>Telzir VejaMais</p>
@@ -41,7 +42,7 @@ export default function Footer() {
         </CompanyInfo>
 
         <CompanyInfo>
-          <h2>Conheça nossas redes sociais</h2>
+          <FooterHeader>Conheça nossas redes sociais</FooterHeader>
           <SocialMediaContainer>
             <img src={Instagram} alt="Ícone do Instagram" />
             <img src={LinkedIn} alt="Ícone do LinkedIn" />
