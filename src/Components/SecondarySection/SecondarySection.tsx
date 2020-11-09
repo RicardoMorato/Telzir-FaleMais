@@ -26,8 +26,8 @@ export default function SecondarySection({
       {reverse ? (
         <InfoContainer>
           <TextContainer reverse={reverse}>
-            <p>{firstText}</p>
-            <p>{secondText}</p>
+            {firstText}
+            {secondText}
           </TextContainer>
           <img src={imgSrc} alt="Logo da empresa" />
         </InfoContainer>
@@ -36,8 +36,8 @@ export default function SecondarySection({
           <img src={imgSrc} alt="Logo da empresa" />
 
           <TextContainer reverse={reverse}>
-            <p>{firstText}</p>
-            <p>{secondText}</p>
+            {firstText}
+            {secondText}
           </TextContainer>
         </InfoContainer>
       )}
