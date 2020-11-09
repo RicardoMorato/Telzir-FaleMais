@@ -4,10 +4,19 @@ import { Table } from "antd";
 
 import { TableContainer } from "./ResultsTable.style";
 
+interface TableItem extends Object {
+  from: string;
+  to: string;
+  time: string;
+  plan: string;
+  withPlan: number | undefined;
+  withoutPlan: number | undefined;
+}
+
 export default function ResultsTable({
-  tableData,
+  rawTableData,
 }: {
-  tableData: Array<Object>;
+  rawTableData: Array<TableItem>;
 }) {
   const columns = [
     {
@@ -30,24 +39,33 @@ export default function ResultsTable({
       dataIndex: "plano",
       key: "plano",
     },
-    // {
-    //   title: "Com FaleMais",
-    //   dataIndex: "comPlano",
-    //   key: "comPlano",
-    // },
-    // {
-    //   title: "Sem FaleMais",
-    //   dataIndex: "semPlano",
-    //   key: "semPlano",
-    // },
+    {
+      title: "Com FaleMais",
+      dataIndex: "comPlano",
+      key: "comPlano",
+    },
+    {
+      title: "Sem FaleMais",
+      dataIndex: "semPlano",
+      key: "semPlano",
+    },
   ];
+
+  // const tableData = rawTableData.map(
+  //   ({ from, to, time, plan, withPlan, withoutPlan }) => {
+  //     withPlan = getValueWithPlan(from, to, time, plan);
+  //     withoutPlan = -1;
+  //   }
+  // );
+
+  // console.log(tableData);
 
   return (
     <TableContainer>
       <Table
         columns={columns}
         pagination={false}
-        dataSource={tableData}
+        dataSource={rawTableData}
       ></Table>
     </TableContainer>
   );

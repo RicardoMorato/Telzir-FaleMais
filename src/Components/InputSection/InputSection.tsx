@@ -8,6 +8,7 @@ import {
   LocationTimeInputsContainer,
   AppButton,
 } from "./InputSection.style";
+import { getValueWithPlan } from "../../global/funcs";
 
 const { Option } = Select;
 
@@ -56,6 +57,8 @@ export default function InputSection({
           destino: to,
           tempo: time,
           plano: plan,
+          comPlano: getValueWithPlan(from, to, plan, time),
+          semPlano: 0,
         },
       ]);
     } else {
@@ -120,9 +123,9 @@ export default function InputSection({
           option?.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
         }
       >
-        <Option value="falemais 30">FaleMais 30</Option>
-        <Option value="falemais 60">FaleMais 60</Option>
-        <Option value="falemais 120">FaleMais 120</Option>
+        <Option value="FaleMais 30">FaleMais 30</Option>
+        <Option value="FaleMais 60">FaleMais 60</Option>
+        <Option value="FaleMais 120">FaleMais 120</Option>
       </Select>
 
       <AppButton onClick={handleSubmit}>

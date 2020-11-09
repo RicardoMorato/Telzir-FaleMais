@@ -18,7 +18,7 @@ export default function MainSection() {
 
       <CalculatorContainer>
         <InputSection handleDataUpdate={setTableData} tableData={tableData} />
-        <ResultsTable tableData={tableData} />
+        <ResultsTable rawTableData={tableData} />
       </CalculatorContainer>
     </SectionContainer>
   );
