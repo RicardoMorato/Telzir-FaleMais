@@ -22,23 +22,23 @@ export default function SecondarySection({
 }) {
   return (
     <SectionContainer>
-      <SectionHeader>{headerText}</SectionHeader>
+      <SectionHeader reverse={reverse}>{headerText}</SectionHeader>
       {reverse ? (
         <InfoContainer>
-          <img src={imgSrc} alt="Logo da empresa" />
-
-          <TextContainer>
+          <TextContainer reverse={reverse}>
             <p>{firstText}</p>
             <p>{secondText}</p>
           </TextContainer>
+          <img src={imgSrc} alt="Logo da empresa" />
         </InfoContainer>
       ) : (
         <InfoContainer>
-          <TextContainer>
+          <img src={imgSrc} alt="Logo da empresa" />
+
+          <TextContainer reverse={reverse}>
             <p>{firstText}</p>
             <p>{secondText}</p>
           </TextContainer>
-          <img src={imgSrc} alt="Logo da empresa" />
         </InfoContainer>
       )}
     </SectionContainer>

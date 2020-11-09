@@ -1,4 +1,8 @@
-import styled from "styled-components";
+import styled, { StyledFunction } from "styled-components";
+
+interface ReverseText {
+  reverse: boolean;
+}
 
 export const SectionContainer = styled.section`
   margin-top: 10%;
@@ -15,10 +19,11 @@ export const SectionContainer = styled.section`
   }
 `;
 
-export const SectionHeader = styled.h1`
+export const SectionHeader = styled.h1<ReverseText>`
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 45px;
+  align-self: ${(props) => (props.reverse ? "flex-end" : "flex-start")};
 `;
 
 export const InfoContainer = styled.div`
@@ -28,7 +33,7 @@ export const InfoContainer = styled.div`
   height: 90%;
 `;
 
-export const TextContainer = styled.div`
+export const TextContainer = styled.div<ReverseText>`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -36,5 +41,6 @@ export const TextContainer = styled.div`
   p {
     max-width: 1200px;
     font-size: 1.1rem;
+    text-align: ${(props) => (props.reverse ? "right" : "left")};
   }
 `;

@@ -16,14 +16,14 @@ function App() {
         headerText="Conheça mais sobre a calculadora de preços"
         firstText={textHolder.firstTextFirstSection}
         secondText={textHolder.secondTextFirstSection}
-        reverse
+        reverse={false}
       />
       <SecondarySection
         imgSrc={CompanyLogo}
-        headerText="Conheça mais sobre a empresa"
-        firstText={textHolder.firstTextFirstSection}
-        secondText={textHolder.secondTextFirstSection}
-        reverse={false}
+        headerText="Conheça mais sobre a empresa e sua história"
+        firstText={textHolder.firstTextSecondSection}
+        secondText={textHolder.secondTextSecondSection}
+        reverse
       />
       <Footer />
     </AppContainer>
