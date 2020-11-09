@@ -8,7 +8,10 @@ import {
   LocationTimeInputsContainer,
   AppButton,
 } from "./InputSection.style";
-import { getValueWithPlan } from "../../global/funcs";
+import {
+  calculatePriceWithPlan,
+  calculatePriceWithoutPlan,
+} from "../../global/funcs";
 
 const { Option } = Select;
 
@@ -57,8 +60,8 @@ export default function InputSection({
           destino: to,
           tempo: time,
           plano: plan,
-          comPlano: getValueWithPlan(from, to, plan, time),
-          semPlano: 0,
+          comPlano: calculatePriceWithPlan(from, to, plan, time),
+          semPlano: calculatePriceWithoutPlan(from, to, time),
         },
       ]);
     } else {
@@ -67,8 +70,6 @@ export default function InputSection({
       );
     }
   }
-
-  console.log(tableData);
 
   return (
     <InputsWrapper>

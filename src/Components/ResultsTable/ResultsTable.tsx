@@ -51,15 +51,6 @@ export default function ResultsTable({
     },
   ];
 
-  // const tableData = rawTableData.map(
-  //   ({ from, to, time, plan, withPlan, withoutPlan }) => {
-  //     withPlan = getValueWithPlan(from, to, time, plan);
-  //     withoutPlan = -1;
-  //   }
-  // );
-
-  // console.log(tableData);
-
   return (
     <TableContainer>
       <Table
