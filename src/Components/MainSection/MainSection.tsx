@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { InputSection, ResultsTable } from "../index";
 import {
@@ -8,6 +8,8 @@ import {
 } from "./MainSection.style";
 
 export default function MainSection() {
+  const [inputInformation, setInputInformation] = useState([]);
+
   return (
     <SectionContainer>
       <SectionHeader>
@@ -15,7 +17,10 @@ export default function MainSection() {
       </SectionHeader>
 
       <CalculatorContainer>
-        <InputSection />
+        <InputSection
+          setInformation={setInputInformation}
+          inputInformation={inputInformation}
+        />
         <ResultsTable />
       </CalculatorContainer>
     </SectionContainer>

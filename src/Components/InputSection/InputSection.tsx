@@ -11,21 +11,25 @@ import {
 
 const { Option } = Select;
 
-export default function InputSection() {
-  function onChange(value: any) {
-    console.log(`selected ${value}`);
-  }
+export default function InputSection({
+  inputInformation,
+  setInformation,
+}: {
+  setInformation: Function;
+  inputInformation: Object;
+}) {
+  let info = {};
 
-  function onBlur() {
-    console.log("blur");
-  }
+  function onChange(inputName: string, value: any) {
+    info = {
+      ...info,
+      [inputName]: value,
+    };
 
-  function onFocus() {
-    console.log("focus");
-  }
-
-  function onSearch(val: string) {
-    console.log("search:", val);
+    setInformation({
+      ...inputInformation,
+      info,
+    });
   }
 
   return (
@@ -36,10 +40,7 @@ export default function InputSection() {
           style={{ width: 100, height: 35 }}
           placeholder="Origem"
           optionFilterProp="children"
-          onChange={onChange}
-          onFocus={onFocus}
-          onBlur={onBlur}
-          onSearch={onSearch}
+          onChange={(value) => onChange("from", value)}
           filterOption={(input, option) =>
             option?.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
           }
@@ -55,10 +56,7 @@ export default function InputSection() {
           style={{ width: 100, height: 35 }}
           placeholder="Destino"
           optionFilterProp="children"
-          onChange={onChange}
-          onFocus={onFocus}
-          onBlur={onBlur}
-          onSearch={onSearch}
+          onChange={(value) => onChange("to", value)}
           filterOption={(input, option) =>
             option?.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
           }
@@ -74,7 +72,7 @@ export default function InputSection() {
           min={1}
           max={10000}
           placeholder="Tempo (min)"
-          onChange={onChange}
+          onChange={(value) => onChange("time", value)}
         />
       </LocationTimeInputsContainer>
 
@@ -83,10 +81,7 @@ export default function InputSection() {
         style={{ width: 360, height: 35 }}
         placeholder="Plano FaleMais"
         optionFilterProp="children"
-        onChange={onChange}
-        onFocus={onFocus}
-        onBlur={onBlur}
-        onSearch={onSearch}
+        onChange={(value) => onChange("plan", value)}
         filterOption={(input, option) =>
           option?.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
         }
@@ -98,14 +93,10 @@ export default function InputSection() {
 
       <ButtonsContainer>
         <AppButton>
-          <p>
-            Limpar
-          </p>
+          <p>Limpar</p>
         </AppButton>
         <AppButton>
-          <p>
-            Calcular
-          </p>
+          <p>Calcular</p>
         </AppButton>
       </ButtonsContainer>
     </InputsWrapper>
