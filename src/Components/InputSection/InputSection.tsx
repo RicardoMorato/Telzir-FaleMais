@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "antd/dist/antd.css";
 import { Select, InputNumber } from "antd";
+import { v4 as uuidv4 } from "uuid";
 
 import {
   InputsWrapper,
@@ -50,6 +51,7 @@ export default function InputSection({
       handleDataUpdate([
         ...tableData,
         {
+          key: uuidv4(),
           Origem: from,
           Destino: to,
           Tempo: time,
