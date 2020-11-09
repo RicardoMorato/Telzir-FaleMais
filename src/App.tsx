@@ -1,15 +1,14 @@
 import React from "react";
 
-import { Navbar, Footer, InputSection, ResultsTable } from "./Components";
+import { Navbar, Footer, MainSection } from "./Components";
 import { AppContainer, GlobalStyles } from "./global/styles";
 
 function App() {
   return (
     <AppContainer>
       <GlobalStyles />
-      {/* <Navbar /> */}
-      <InputSection />
-      <ResultsTable />
+      <Navbar />
+      <MainSection />
       <Footer />
     </AppContainer>
   );
