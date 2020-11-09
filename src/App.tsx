@@ -1,6 +1,6 @@
 import React from "react";
 
-import { CompanyLogo } from "./assets";
+import { CompanyLogo, CompanyLogoNoSubtitle } from "./assets";
 import { textHolder } from "./global/texts";
 import { Navbar, Footer, MainSection, SecondarySection } from "./Components";
 import { AppContainer, GlobalStyles } from "./global/styles";
@@ -19,7 +19,7 @@ function App() {
         reverse={false}
       />
       <SecondarySection
-        imgSrc={CompanyLogo}
+        imgSrc={CompanyLogoNoSubtitle}
         headerText="Conheça mais sobre a empresa e sua história"
         firstText={textHolder.firstTextSecondSection}
         secondText={textHolder.secondTextSecondSection}

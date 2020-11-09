@@ -21,7 +21,7 @@ export default function SecondarySection({
   reverse: boolean;
 }) {
   return (
-    <SectionContainer>
+    <SectionContainer reverse={reverse}>
       <SectionHeader reverse={reverse}>{headerText}</SectionHeader>
       {reverse ? (
         <InfoContainer>

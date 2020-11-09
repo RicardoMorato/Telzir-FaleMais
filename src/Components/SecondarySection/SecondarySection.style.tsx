@@ -1,10 +1,10 @@
-import styled, { StyledFunction } from "styled-components";
+import styled from "styled-components";
 
 interface ReverseText {
   reverse: boolean;
 }
 
-export const SectionContainer = styled.section`
+export const SectionContainer = styled.section<ReverseText>`
   margin-top: 10%;
   height: 100%;
   width: 100%;
@@ -16,6 +16,7 @@ export const SectionContainer = styled.section`
 
   img {
     width: 300px;
+    margin-right: ${(props) => (props.reverse ? "50px" : "0px")};
   }
 `;
 
@@ -41,6 +42,5 @@ export const TextContainer = styled.div<ReverseText>`
   p {
     max-width: 1200px;
     font-size: 1.1rem;
-    text-align: ${(props) => (props.reverse ? "right" : "left")};
   }
 `;
