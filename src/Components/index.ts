@@ -3,6 +3,6 @@ import Footer from "./Footer";
 import InputSection from "./InputSection";
 import ResultsTable from "./ResultsTable";
 import MainSection from "./MainSection";
-import KnowMore from "./KnowMore";
+import SecondarySection from "./SecondarySection";
 
-export { Navbar, Footer, InputSection, ResultsTable, MainSection, KnowMore };
+export { Navbar, Footer, InputSection, ResultsTable, MainSection, SecondarySection };
