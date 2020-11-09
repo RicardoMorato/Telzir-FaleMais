@@ -52,10 +52,10 @@ export default function InputSection({
         ...tableData,
         {
           key: uuidv4(),
-          Origem: from,
-          Destino: to,
-          Tempo: time,
-          Plano: plan,
+          origem: from,
+          destino: to,
+          tempo: time,
+          plano: plan,
         },
       ]);
     } else {
