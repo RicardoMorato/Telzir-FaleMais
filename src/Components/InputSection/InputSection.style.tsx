@@ -27,13 +27,6 @@ export const LocationTimeInputsContainer = styled.div`
   justify-content: space-evenly;
 `;
 
-export const ButtonsContainer = styled.div`
-  width: 80%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-`;
-
 export const AppButton = styled.button`
   height: 30px;
   width: 130px;
@@ -42,7 +35,7 @@ export const AppButton = styled.button`
   border-width: 0.5px;
   border-radius: 10px;
   margin-left: 20px;
-  transition: 0.5s all ease-out;
+  transition: 0.3s all ease;
   cursor: pointer;
 
   &:hover {

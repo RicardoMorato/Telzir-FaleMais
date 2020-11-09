@@ -8,7 +8,7 @@ import {
 } from "./MainSection.style";
 
 export default function MainSection() {
-  const [inputInformation, setInputInformation] = useState([]);
+  const [tableData, setTableData] = useState([]);
 
   return (
     <SectionContainer>
@@ -17,10 +17,7 @@ export default function MainSection() {
       </SectionHeader>
 
       <CalculatorContainer>
-        <InputSection
-          setInformation={setInputInformation}
-          inputInformation={inputInformation}
-        />
+        <InputSection handleDataUpdate={setTableData} tableData={tableData} />
         <ResultsTable />
       </CalculatorContainer>
     </SectionContainer>

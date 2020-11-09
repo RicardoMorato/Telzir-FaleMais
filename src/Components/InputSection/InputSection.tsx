@@ -1,36 +1,69 @@
-import React from "react";
+import React, { useState } from "react";
 import "antd/dist/antd.css";
 import { Select, InputNumber } from "antd";
 
 import {
   InputsWrapper,
   LocationTimeInputsContainer,
-  ButtonsContainer,
   AppButton,
 } from "./InputSection.style";
 
 const { Option } = Select;
 
 export default function InputSection({
-  inputInformation,
-  setInformation,
+  handleDataUpdate,
+  tableData,
 }: {
-  setInformation: Function;
-  inputInformation: Object;
+  handleDataUpdate: Function;
+  tableData: Array<Object>;
 }) {
-  let info = {};
+  const [from, setFrom] = useState("");
+  const [to, setTo] = useState("");
+  const [time, setTime] = useState("");
+  const [plan, setPlan] = useState("");
 
-  function onChange(inputName: string, value: any) {
-    info = {
-      ...info,
-      [inputName]: value,
-    };
-
-    setInformation({
-      ...inputInformation,
-      info,
-    });
+  function handleOptions(otherInputsName: string) {
+    if (otherInputsName.length === 0) {
+      return (
+        <>
+          <Option value="011">011</Option>
+          <Option value="016">016</Option>
+          <Option value="017">017</Option>
+          <Option value="018">018</Option>
+        </>
+      );
+    } else if (otherInputsName === "011") {
+      return (
+        <>
+          <Option value="016">016</Option>
+          <Option value="017">017</Option>
+          <Option value="018">018</Option>
+        </>
+      );
+    } else {
+      return <Option value="011">011</Option>;
+    }
   }
+
+  function handleSubmit() {
+    if (from && to && time && plan) {
+      handleDataUpdate([
+        ...tableData,
+        {
+          Origem: from,
+          Destino: to,
+          Tempo: time,
+          Plano: plan,
+        },
+      ]);
+    } else {
+      alert(
+        "Todas as informações devem ser preenchidas para calcularmos corretamente"
+      );
+    }
+  }
+
+  console.log(tableData);
 
   return (
     <InputsWrapper>
@@ -40,7 +73,7 @@ export default function InputSection({
           style={{ width: 100, height: 35 }}
           placeholder="Origem"
           optionFilterProp="children"
-          onChange={(value) => onChange("from", value)}
+          onChange={(value) => setFrom(value.toString())}
           filterOption={(input, option) =>
             option?.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
           }
@@ -56,15 +89,12 @@ export default function InputSection({
           style={{ width: 100, height: 35 }}
           placeholder="Destino"
           optionFilterProp="children"
-          onChange={(value) => onChange("to", value)}
+          onChange={(value) => setTo(value.toString())}
           filterOption={(input, option) =>
             option?.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
           }
         >
-          <Option value="011">011</Option>
-          <Option value="016">016</Option>
-          <Option value="017">017</Option>
-          <Option value="018">018</Option>
+          {handleOptions(from)}
         </Select>
 
         <InputNumber
@@ -72,7 +102,9 @@ export default function InputSection({
           min={1}
           max={10000}
           placeholder="Tempo (min)"
-          onChange={(value) => onChange("time", value)}
+          onChange={(value) => {
+            if (value) setTime(value.toString());
+          }}
         />
       </LocationTimeInputsContainer>
 
@@ -81,7 +113,7 @@ export default function InputSection({
         style={{ width: 360, height: 35 }}
         placeholder="Plano FaleMais"
         optionFilterProp="children"
-        onChange={(value) => onChange("plan", value)}
+        onChange={(value) => setPlan(value.toString())}
         filterOption={(input, option) =>
           option?.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
         }
@@ -91,14 +123,9 @@ export default function InputSection({
         <Option value="falemais 120">FaleMais 120</Option>
       </Select>
 
-      <ButtonsContainer>
-        <AppButton>
-          <p>Limpar</p>
-        </AppButton>
-        <AppButton>
-          <p>Calcular</p>
-        </AppButton>
-      </ButtonsContainer>
+      <AppButton onClick={handleSubmit}>
+        <p>Calcular</p>
+      </AppButton>
     </InputsWrapper>
   );
 }
