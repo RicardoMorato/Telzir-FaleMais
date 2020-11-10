@@ -39,7 +39,8 @@ export const NavigationOptionsContainer = styled.div`
   align-items: center;
   margin-right: 100px;
 
-  p {
+  a {
+    color: black !important;
     font-family: "Heebo", sans-serif;
     font-weight: bold;
     cursor: pointer;

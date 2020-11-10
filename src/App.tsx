@@ -17,6 +17,7 @@ function App() {
         firstText={textHolder.firstTextFirstSection}
         secondText={textHolder.secondTextFirstSection}
         reverse={false}
+        idNameForNavbar={"about-the-calculator"}
       />
       <SecondarySection
         imgSrc={CompanyLogoNoSubtitle}
@@ -24,6 +25,7 @@ function App() {
         firstText={textHolder.firstTextSecondSection}
         secondText={textHolder.secondTextSecondSection}
         reverse
+        idNameForNavbar={"about-the-company"}
       />
       <Footer />
     </AppContainer>

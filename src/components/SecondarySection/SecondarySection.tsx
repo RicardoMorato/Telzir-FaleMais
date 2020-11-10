@@ -13,15 +13,17 @@ export default function SecondarySection({
   firstText,
   secondText,
   reverse,
+  idNameForNavbar,
 }: {
   imgSrc: string;
   headerText: string;
   firstText: any;
   secondText: any;
   reverse: boolean;
+  idNameForNavbar: string;
 }) {
   return (
-    <SectionContainer reverse={reverse}>
+    <SectionContainer reverse={reverse} id={idNameForNavbar}>
       <SectionHeader reverse={reverse}>{headerText}</SectionHeader>
       {reverse ? (
         <InfoContainer>

@@ -5,7 +5,7 @@ interface ReverseText {
 }
 
 export const SectionContainer = styled.section<ReverseText>`
-  margin-top: 10%;
+  margin-top: 150px;
   height: 100%;
   width: 100%;
   display: flex;
