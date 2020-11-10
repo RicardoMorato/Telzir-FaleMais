@@ -14,8 +14,14 @@ export const SectionContainer = styled.section<ReverseText>`
   position: relative;
   padding: 0 90px;
   img {
-    width: 250px;
+    width: 275px;
     margin-right: ${(props) => (props.reverse ? "50px" : "0px")};
+  }
+
+  @media only screen and (max-width: 1600px) {
+    img {
+      width: 250px;
+    }
   }
 
   @media only screen and (max-width: 1360px) {
@@ -44,7 +50,7 @@ export const TextContainer = styled.div<ReverseText>`
   flex-direction: column;
   justify-content: space-between;
   p {
-    max-width: 1200px;
+    max-width: 1300px;
     font-size: 1.1rem;
   }
 
