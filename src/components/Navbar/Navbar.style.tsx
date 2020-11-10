@@ -45,4 +45,8 @@ export const NavigationOptionsContainer = styled.div`
     font-weight: bold;
     cursor: pointer;
   }
+
+  @media only screen and (max-width: 1024px) {
+    width: 60%;
+  }
 `;
