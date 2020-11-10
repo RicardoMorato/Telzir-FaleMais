@@ -18,6 +18,12 @@ export const NavbarContainer = styled.header`
     margin-left: 100px;
     cursor: pointer;
   }
+
+  @media only screen and (max-width: 1440px) {
+    img {
+      width: 150px;
+    }
+  }
 `;
 
 export const NavigationOptionsContainer = styled.div`
