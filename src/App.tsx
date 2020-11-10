@@ -2,7 +2,7 @@ import React from "react";
 
 import { CompanyLogo, CompanyLogoNoSubtitle } from "./assets";
 import { textHolder } from "./global/texts";
-import { Navbar, Footer, MainSection, SecondarySection } from "./Components";
+import { Navbar, Footer, MainSection, SecondarySection } from "./components";
 import { AppContainer, GlobalStyles } from "./global/styles";
 
 function App() {
