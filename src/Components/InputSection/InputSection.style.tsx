@@ -18,6 +18,10 @@ export const InputsWrapper = styled.div`
   .ant-input-number {
     border-radius: 5px !important;
   }
+
+  @media only screen and (max-width: 1360px) {
+    width: 400px;
+  }
 `;
 
 export const LocationTimeInputsContainer = styled.div`

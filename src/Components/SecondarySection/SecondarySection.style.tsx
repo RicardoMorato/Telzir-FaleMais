@@ -17,6 +17,12 @@ export const SectionContainer = styled.section<ReverseText>`
     width: 250px;
     margin-right: ${(props) => (props.reverse ? "50px" : "0px")};
   }
+
+  @media only screen and (max-width: 1360px) {
+    img {
+      width: 200px;
+    }
+  }
 `;
 
 export const SectionHeader = styled.h1<ReverseText>`
@@ -52,6 +58,13 @@ export const TextContainer = styled.div<ReverseText>`
   @media only screen and (max-width: 1440px) {
     p {
       max-width: 900px;
+    }
+  }
+
+  @media only screen and (max-width: 1360px) {
+    p {
+      max-width: 800px;
+      font-size: 0.9rem;
     }
   }
 `;
