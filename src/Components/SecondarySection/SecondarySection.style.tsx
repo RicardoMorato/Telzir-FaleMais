@@ -13,9 +13,8 @@ export const SectionContainer = styled.section<ReverseText>`
   justify-content: space-around;
   position: relative;
   padding: 0 90px;
-
   img {
-    width: 300px;
+    width: 250px;
     margin-right: ${(props) => (props.reverse ? "50px" : "0px")};
   }
 `;
@@ -38,9 +37,15 @@ export const TextContainer = styled.div<ReverseText>`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   p {
     max-width: 1200px;
     font-size: 1.1rem;
+  }
+
+  @media only screen and (max-width: 1600px) {
+    p {
+      max-width: 1000px;
+      font-size: 1rem;
+    }
   }
 `;
