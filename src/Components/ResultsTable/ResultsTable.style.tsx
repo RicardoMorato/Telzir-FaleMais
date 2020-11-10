@@ -13,4 +13,8 @@ export const TableContainer = styled.div`
   .ant-table-thead > tr > th {
     font-weight: 600;
   }
+
+  @media only screen and (max-width: 1280px) {
+    max-width: 600px;
+  }
 `;

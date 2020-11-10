@@ -24,10 +24,16 @@ export const NavbarContainer = styled.header`
       width: 150px;
     }
   }
+
+  @media only screen and (max-width: 1280px) {
+    img {
+      width: 125px;
+    }
+  }
 `;
 
 export const NavigationOptionsContainer = styled.div`
-  width: 27.5%;
+  width: 35%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -35,6 +41,7 @@ export const NavigationOptionsContainer = styled.div`
 
   p {
     font-family: "Heebo", sans-serif;
+    font-weight: bold;
     cursor: pointer;
   }
 `;
