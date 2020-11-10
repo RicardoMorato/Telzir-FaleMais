@@ -1,9 +1,6 @@
 import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
-  @import '~antd/dist/antd.css';
-
   body {
     margin: 0;
     padding: 0;
