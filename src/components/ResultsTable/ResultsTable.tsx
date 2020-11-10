@@ -9,8 +9,8 @@ interface TableItem extends Object {
   to: string;
   time: string;
   plan: string;
-  withPlan: number | undefined;
-  withoutPlan: number | undefined;
+  withPlan: number | undefined | string;
+  withoutPlan: number | undefined | string;
 }
 
 export default function ResultsTable({
