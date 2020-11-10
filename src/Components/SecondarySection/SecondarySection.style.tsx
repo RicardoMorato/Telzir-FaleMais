@@ -73,4 +73,11 @@ export const TextContainer = styled.div<ReverseText>`
       font-size: 0.9rem;
     }
   }
+
+  @media only screen and (max-width: 1024px) {
+    p {
+      max-width: 600px;
+      font-size: 0.8rem;
+    }
+  }
 `;

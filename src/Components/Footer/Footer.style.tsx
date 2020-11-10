@@ -23,6 +23,10 @@ export const FooterHeader = styled.h2`
   color: ${Colors.white.color};
   font-size: 1.2rem;
   font-weight: bold;
+
+  @media only screen and (max-width: 1024px) {
+    font-size: 1rem;
+  }
 `;
 
 export const MainInformationContainer = styled.div`

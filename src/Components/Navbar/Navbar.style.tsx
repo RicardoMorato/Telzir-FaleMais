@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Colors } from "../../global/styles";
 
 export const NavbarContainer = styled.header`
-  height: 14%;
+  height: 140px;
   width: 100%;
   position: fixed;
   display: flex;
@@ -33,7 +33,7 @@ export const NavbarContainer = styled.header`
 `;
 
 export const NavigationOptionsContainer = styled.div`
-  width: 35%;
+  width: 40%;
   display: flex;
   justify-content: space-around;
   align-items: center;
